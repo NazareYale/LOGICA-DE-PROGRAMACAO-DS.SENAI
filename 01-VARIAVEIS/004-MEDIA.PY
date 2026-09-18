@@ -22,4 +22,3 @@ if media >= 7:
     print('aluno aprovado')
 else:
     print('aluno reprovado')
-    
