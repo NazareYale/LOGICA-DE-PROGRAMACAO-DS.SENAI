@@ -1,11 +1,12 @@
 import os
 os.system('cls')
 
+quantidade = 5
 pares = 0
 impares = 0
 
-for i in range(3):
-    numero = int(input('Digite um número: '))
+for i in range(quantidade):
+    numero = int(input(f'Digite o {i+1}º número: '))
     if numero % 2 == 0:
         pares = pares + 1
     else:
