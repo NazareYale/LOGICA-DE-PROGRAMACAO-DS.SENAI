@@ -16,7 +16,7 @@ if notas >= 7:
 elif media >=4:
     resultado = 'Reprovado'
 else:
-    resultado = 'Reprovado.'
+    resultado = 'Recuperação.'
 
 
 #SAÍDA
