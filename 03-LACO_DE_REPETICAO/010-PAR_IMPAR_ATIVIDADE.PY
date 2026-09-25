@@ -1,6 +1,7 @@
 import os
 os.system('cls')
 
+#CONSTANTE
 quantidade = 5
 pares = 0
 impares = 0
