@@ -14,6 +14,7 @@ for i in range(QUANTIDADE_NOTAS):
         else:
             print()
             print('Nota inválida, tente novamente!')
+            print()
 
 media = soma / QUANTIDADE_NOTAS
 
