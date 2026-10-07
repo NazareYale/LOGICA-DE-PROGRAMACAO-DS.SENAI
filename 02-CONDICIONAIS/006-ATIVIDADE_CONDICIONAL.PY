@@ -6,5 +6,5 @@ numero_solicitado = float(input('Digite o número: '))
 if numero_solicitado <= 10:
     print('É MENOR QUE 10!')
 
-else: 
+else:
     print('É MAIOR QUE 10!')

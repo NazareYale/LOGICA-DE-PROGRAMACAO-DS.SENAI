@@ -18,7 +18,7 @@ Opções      Produto     Preço
 
 
 
-while True: 
+while True:
     opcao = input('Digite a opção desejada: ')
 
     match opcao:
