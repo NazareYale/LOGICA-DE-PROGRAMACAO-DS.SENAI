@@ -1,7 +1,8 @@
 import os
 os.system('cls')
 
-print('''       ==MENU==
+print('''            ==MENU==
+
 Opções      Produto     Preço
 
 1           Macarrão    R$ 3,80

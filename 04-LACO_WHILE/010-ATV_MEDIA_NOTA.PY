@@ -1,19 +1,20 @@
 import os
 os.system('cls')
 
-VALOR_NOTAS = 7
-QUANTIDADE_NOTAS = 2
 
-
-
-media = SOMA / QUANTIDADE_NOTAS
+soma = 0
+contador = 0
 
 while True:
-    nota = str(input('Deseja inserir outra nota(S/N)?')).lower()
-    if nota == 'S' or 's':
-        new_nota = float(input('Insira a nova nota: '))
-        VALOR_NOTAS += new_nota
-        print(f'A média é: {media}')
-    elif nota == 'N' or 'n':
-        print(f'A média é: {media}')
-    break
+    nota = float(input('Digite a sua nota: '))
+    soma += nota
+    contador = contador + 1
+
+    resposta = input('Deseja inserir mais uma nota?(S/N): ')
+
+    if resposta.upper() == 'N':
+        break
+
+media = soma / contador
+print(f'Quantidade de notas informadas: {contador}')
+print(f'A sua média é: {media:.2f}')
