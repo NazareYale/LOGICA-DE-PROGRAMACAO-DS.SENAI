@@ -47,7 +47,7 @@ while True:
         print()
         print('Opção inválida, tente novamente.')
         print()
-        
+
 
 print('Carregando os resultados......')
 time.sleep(1)
@@ -55,9 +55,9 @@ os.system('cls')
 if total_familias > 0:
     print('===== RESULTADOS =====')
     print(f'Total de famílias: {total_familias}')
-    print(f'Média salarial: R$ {soma_salarios / total_familias}')
-    print(f'Média de filhos: {soma_filhos / total_familias}')
-    print(f'Maior salário: R$ {maior_salario}')
+    print(f'Média salarial: R$ {soma_salarios / total_familias:.2f}')
+    print(f'Média de filhos: {soma_filhos / total_familias:.2f}')
+    print(f'Maior salário: R$ {maior_salario:.2f}')
     print(f'Menor salário: R$ {menor_salario:.2f}')
 else:
     print('Nenhuma família foi cadastrada.')
