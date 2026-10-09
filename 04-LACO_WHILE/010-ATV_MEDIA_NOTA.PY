@@ -1,21 +1,33 @@
 import os
 os.system('cls')
 
-
 soma = 0
-contador = 0
+quantidade_notas = 0
 
 while True:
-    nota = float(input('Digite a sua nota: '))
-    soma += nota
-    contador = contador + 1
+    os.system('cls')
+    print('''    === MENU===
+S - Inserir nota
+N - Calcular Média''')
+    
+    resposta = input('Deseja inserir uma nota: ').lower()
 
-    resposta = input('Deseja inserir mais uma nota?(S/N): ')
 
-    if resposta.upper() == 'N':
-        break
+    match resposta:
+        case 's':
+            nota = float(input('Digite sua nota: '))
+            soma += nota
+            quantidade_notas += 1
+        case 'n':
+            break
+        
+        case _:
+            print('Opção inválida!')
+            input('Pressione qualquer tecla para continuar.....')
 
-media = soma / contador
-print()
-print(f'Quantidade de notas informadas: {contador}')
-print(f'A sua média é: {media:.2f}')
+
+if quantidade_notas == 0:
+    print('Não foram inseridas notas. \n')
+else:
+    media = soma / quantidade_notas
+    print(f'Média: {media}')
