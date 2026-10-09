@@ -16,5 +16,6 @@ while True:
         break
 
 media = soma / contador
+print()
 print(f'Quantidade de notas informadas: {contador}')
 print(f'A sua média é: {media:.2f}')
