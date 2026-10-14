@@ -7,7 +7,7 @@ for i in range(QUANTIDADE_NOTAS):
     notas = float(input(f'Digite a sua {i +1}º nota: '))
     vetor_notas.append(notas)
 
-#soma = sum(vetor_notas)#FUNCIONA SOMANDO TODOS OS NÚMEROS INFRORMADOS NO VETOR.
+#soma = sum(vetor_notas)#FUNCIONA SOMANDO TODOS OS NÚMEROS QUE ESTÁ NO VETOR.
 media = sum(vetor_notas) / QUANTIDADE_NOTAS
 
 for posicao, nota in enumerate(vetor_notas, start=1):
