@@ -1,42 +1,55 @@
 import os
 os.system('cls')
 
-print('''              ==MENU==
-
-CÓDIGO         PRATO            VALOR
-
-1              PICANHA          R$25.00
-
-2              LASANHA          R$20.00
-
-3              STROGONOFF       R$15.00
-
-4              SALADA MISTA     R$15.00
-
-5              MISTO QUENTE     R$5.00
-
-''')
+vetor_pratos = []
+vetor_precos = []
 
 while True:
-    Codigo = input('Digite a opção desejada: ')
+    print('''
+Código      Prato               Preço
+1           Picanha             R$ 25,00
+2           Lasanha             R$ 20,00
+3           Strogonoff          R$ 18,00
+4           Bife acebolado      R$ 15,00
+5           Salada mista        R$ 5,00
+        ''')
+    opcao = int(input('Digite a opção desejada: '))
 
-    match Codigo:
-        case '1':
-            print('Prato: Picanha \nvalor: R$25,00')
-            break
-        case '2':
-            print('Prato: Lasanha \nvalor: R$20,00')
-            break
-        case '3':
-            print('Prato: Strogonoff \nvalor: R$15,00')
-            break
-        case '4':
-            print('Prato: Salada Mista \nvalor: R$15,00')
-            break
-        case '5':
-            print('Prato: Misto Quente \nvalor: R$5,00')
-            break
+    match opcao:
+        case 1:
+            prato = 'Picanha'
+            preco = 25
+        case 2:
+            prato = 'Lasanha'
+            preco = 20
+        case 3:
+            prato = 'Strogonoff'
+            preco = 18
+        case 4:
+            prato = 'Bife acebolado'
+            preco = 15
+        case 5:
+            prato = 'Salada mista'
+            preco = 5
         case _:
-                    print()
-                    print('Opção inválida!')
-                    print()
+            print('Opção inválida. \nTente novamente... \n')
+
+    if opcao >= 1 and opcao <= 5:
+        vetor_pratos.append(prato)
+        vetor_precos.append(preco)
+
+    continuar = input('Deseja escolher outro prato? \nResponda com S ou N: ').upper()
+    if continuar == 'N':
+        break
+    os.system('cls')
+
+if sum(vetor_precos) == 0:
+    print('\nNenhum prato selecionado.')
+else:
+    print('\n= PRATOS ESCOLHIDOS =')
+    for i, prato in enumerate(vetor_pratos, start=1):
+        print(f'{i}º prato: {prato}')
+    
+    print(f'\nTotal: R$ {sum(vetor_precos)}')
+
+print('\nVolte sempre!')
