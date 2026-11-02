@@ -2,8 +2,6 @@ import os
 import time
 os.system('cls')
 
-import os
-
 soma_salarios = 0
 quantidade = 0
 maior_idade = 0
@@ -58,8 +56,10 @@ while True:
             os.system('cls')
 
     elif opcao == '3':
+        print()
         print('Encerrando o programa......')
         time.sleep(1)
+        os.system('cls')
         print('==FIM==')
         break
 

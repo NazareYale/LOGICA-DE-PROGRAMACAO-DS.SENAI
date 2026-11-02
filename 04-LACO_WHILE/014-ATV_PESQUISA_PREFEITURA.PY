@@ -9,7 +9,7 @@ maior_salario = 0
 menor_salario = 0
 
 while True:
-    print('''      === MENU ===
+    print('''    ===== MENU =====
 1 - Adicionar família
 2 - Sair e exibir resultados
     ''')
@@ -17,6 +17,9 @@ while True:
     opcao = input('Escolha uma opção: ') 
 
     if opcao == '1':
+        print()
+        os.system('cls')
+        print('===== CADASTRO =====')
         salario = float(input('Salário da família: R$'))
         filhos = int(input('Número de filhos: '))
 
@@ -41,7 +44,10 @@ while True:
         break
 
     else:
+        print()
         print('Opção inválida, tente novamente.')
+        print()
+
 
 print('Carregando os resultados......')
 time.sleep(1)
@@ -53,5 +59,8 @@ if total_familias > 0:
     print(f'Média de filhos: {soma_filhos / total_familias:.1f}')
     print(f'Maior salário: R$ {maior_salario:.1f}')
     print(f'Menor salário: R$ {menor_salario:.1f}')
+    print(f'Média de filhos: {soma_filhos / total_familias:.2f}')
+    print(f'Maior salário: R$ {maior_salario:.2f}')
+    print(f'Menor salário: R$ {menor_salario:.2f}')
 else:
     print('Nenhuma família foi cadastrada.')
