@@ -47,10 +47,10 @@ print('Carregando os resultados......')
 time.sleep(1)
 os.system('cls')
 if total_familias > 0:
-    print('===== RESULTADOS =====')
+    print('=== RESULTADOS ===')
     print(f'Total de famílias: {total_familias}')
     print(f'Média salarial: R$ {soma_salarios / total_familias:.2f}')
-    print(f'Média de filhos: {soma_filhos / total_familias:.2f}')
+    print(f'Média de filhos: {soma_filhos / total_familias:.1f}')
     print(f'Maior salário: R$ {maior_salario:.1f}')
     print(f'Menor salário: R$ {menor_salario:.1f}')
 else:
