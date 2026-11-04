@@ -23,7 +23,7 @@ while True:
             print('=CADASTRANDO PACIENTE=')
             paciente = input('Digite o seu nome completo: ').strip().upper()
             if paciente == '':
-                print('O nome não podem ficar em branco! Por favor responda.')
+                print('O nome não pode ficar em branco! Por favor responda.')
             elif paciente in lista_pacientes:
                 print(f'{paciente} já está cadastrado.')
             else:
