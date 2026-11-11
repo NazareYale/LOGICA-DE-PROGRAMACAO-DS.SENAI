@@ -4,8 +4,8 @@ os.system('cls')
 #Criando uma função
 def cabecalho():
     print('\n')
-    print('= '*15)
-    print('      SENAI')
+    print('='*15)
+    print('     SENAI')
     print('='*15)
 
 cabecalho() #Usando a função

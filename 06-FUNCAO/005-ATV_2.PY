@@ -1,5 +1,4 @@
 import os
-import time
 os.system('cls')
 
 def logo_senai():
@@ -12,15 +11,18 @@ def menu():
 ===== MENU =====
 1 - CADASTRAR CLIENTE
 2 - MOSTRAR DADOS
-3 -SAIR
+3 - SAIR
 ''')
     
 
 def mostrar_dados(nome, email, telefone):
-    print(f'Olá {nome}, Seja Bem-vindo! \nO clinte {nome} tem como telefone:{telefone} e tem como email registrado:{email}')
+    try:
+        print(f'Olá {nome}, Seja Bem-vindo!\nO clinte {nome} tem como telefone:{telefone} e tem como email registrado:{email}')
+    except:
+        print('Nenhum dado cadastrado.')
 
 while True:
-    print()
+    os.system('cls')
     logo_senai()
     menu()
     opcao = int(input('Digite a opção escolhida: '))
@@ -42,11 +44,10 @@ while True:
         
         case 3:
             print('Finalizando o programa...')
-            time.sleep(1)
-            break
-
+            exit()
+            
         case _:
             print('Inválido!\nTente novamente.')
     
-    input('Pressione qualquer tecla para continuar...')
+    input('\nPressione qualquer tecla para continuar...')
     os.system('cls')
