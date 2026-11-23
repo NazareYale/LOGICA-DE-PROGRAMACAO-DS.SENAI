@@ -1,9 +1,9 @@
 import os
-from dataclasses import dataClass
+from dataclasses import dataclass
 os.system('cls')
 
 @dataclass
-class produto:
+class Produto:
     nome:str
     preco:float
 
@@ -11,17 +11,17 @@ lista_produtos = []
 
 def mostrar_produto():
     produto = produto(
-        nome =input('Digite o nome do produto: ')
+        nome = input('Digite o nome do produto: '),
         preco = float(input('Digite o preço: '))
     )
     lista_produtos.append(produto)
 
 def mostrar_dados(lista_produtos):
     for i in range(3):
-        print(f'{produto.nome} custa R$ {produto.preco}')
+        print(f'{Produto.nome} custa R${Produto.preco}')
 
 print('= SOLICITANDO DADOS =')
-solicitar_dados()
+mostrar_produto()
 
 print('\n= EXIBINDO DADOS =')
 mostrar_dados(lista_produtos)
