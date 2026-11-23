@@ -11,7 +11,7 @@ class Cliente:
 lista_clientes = []
 
 print('== SOLICITANDO DADOS ==')
-for i in range(1):
+for i in range(2):
     dados_do_cliente = Cliente(
         nome = input('Digite o seu nome: '),
         telefone = input('Digite o seu telefone: '),
